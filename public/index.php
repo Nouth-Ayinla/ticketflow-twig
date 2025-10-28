@@ -6,15 +6,23 @@ use TicketFlow\Session;
 use TicketFlow\Controllers\AuthController;
 use TicketFlow\Controllers\DashboardController;
 use TicketFlow\Controllers\TicketController;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
+use Twig\Extension\DebugExtension;
 
 // Initialize Twig
-$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../templates');
-$twig = new \Twig\Environment($loader, [
+$loader = new FilesystemLoader(__DIR__ . '/../templates');
+$twig = new Environment($loader, [
     'cache' => false,
     'debug' => true
 ]);
 
-$twig->addExtension(new \Twig\Extension\DebugExtension());
+$twig->addExtension(new DebugExtension());
+
+// Add global path variable for assets
+$twig->addGlobal('base_path', '/public');
+$twig->addGlobal('css_path', '/public/css');
+$twig->addGlobal('js_path', '/public/js');
 
 // Start session and CSRF protection
 Session::start();

@@ -1,6 +1,10 @@
 RewriteEngine On
 
-# Redirect all requests to index.php
+# If the requested file or directory exists, serve it
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+
+# Otherwise, route all requests to index.php
+
+RewriteRule ^ index.php [QSA,L]
