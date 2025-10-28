@@ -342,88 +342,11 @@ Simple PHP-based routing in `public/index.php`:
 - `/tickets/edit/{id}` - Edit ticket (protected)
 - `/tickets/delete/{id}` - Delete ticket (protected)
 
-## 🚧 Known Issues & Limitations
-
-1. **No Database**: Uses JSON files for storage
-2. **Single Server**: Not suitable for multi-server deployments
-3. **File Locking**: No concurrent write protection
-4. **Limited Scalability**: JSON files not ideal for large datasets
-5. **No Real Authentication**: Simulated auth for demo purposes
-
-## 🔮 Future Enhancements
-
-- [ ] MySQL/PostgreSQL database integration
-- [ ] Password hashing (bcrypt/Argon2)
-- [ ] CSRF protection
-- [ ] Rate limiting
-- [ ] File upload support
-- [ ] Email notifications
-- [ ] Advanced search and filtering
-- [ ] Pagination for large ticket lists
-- [ ] User roles and permissions
-- [ ] API endpoints
-- [ ] Docker containerization
-
-## 🧪 Testing
-
-### Manual Testing
-
-1. Test authentication flow
-2. Create tickets with various statuses
-3. Edit existing tickets
-4. Delete tickets
-5. Verify session persistence
-6. Test logout functionality
-
-### Server Requirements
-
-- PHP 8.0+
-- mod_rewrite (Apache) or equivalent
-- Write permissions on `data/` directory
-
-## 📄 License
-
-MIT License - Free to use for personal or commercial projects
-
-## 👨‍💻 Author
-
-Built as part of the Multi-Framework Ticket Management Web App challenge
-
-## 🤝 Contributing
-
-Contributions welcome! Please ensure:
-
-1. Code follows PSR-12 standards
-2. Templates are properly escaped
-3. Sessions are managed securely
-4. Data validation is thorough
-
-## 📞 Support
-
-Common issues:
-
-**500 Internal Server Error:**
-
-- Check `.htaccess` files exist
-- Verify mod_rewrite is enabled
-- Check file permissions on `data/` directory
-
-**Session not persisting:**
-
-- Verify session.save_path is writable
-- Check PHP session configuration
-
-**Tickets not saving:**
-
-- Ensure `data/` directory is writable (755 or 777)
-- Check JSON file permissions (644)
 
 ## 🔗 Related Implementations
 
-This is part of a multi-framework project:
+This is part of a multi-framework project: see on git hub "https://github.com/Nouth-Ayinla/ticketflow-multi-framework"
 
-- **React Implementation**: See `ticketflow-react/`
-- **Vue.js Implementation**: See `ticketflow-vue/`
 - **Twig/PHP Implementation**: You are here
 
 
