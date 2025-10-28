@@ -2,4 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "php -S 0.0.0.0:8080 -t public"
+startCommand = "php -S 0.0.0.0:$PORT -t public"
+
+[build.env]
+NIXPACKS_PHP_VERSION = "8.2"
