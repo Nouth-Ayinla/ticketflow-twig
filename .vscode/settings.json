@@ -1,0 +1,20 @@
+{
+  "files.associations": {
+    "*.twig": "twig"
+  },
+  "emmet.includeLanguages": {
+    "twig": "html"
+  },
+  "php.suggest.basic": false,
+  "intelephense.files.associations": [
+    "*.php",
+    "*.phtml"
+  ],
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": true
+  },
+  "[twig]": {
+    "editor.defaultFormatter": "mblode.twig-language-2"
+  }
+}
